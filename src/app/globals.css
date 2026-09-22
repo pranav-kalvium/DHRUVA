@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand: deep navy for primary structure. */
+  --color-navy-950: #071a2c;
+  --color-navy-900: #0a2540;
+  --color-navy-800: #103252;
+  --color-navy-700: #16406a;
+  --color-navy-600: #1d4f83;
+  --color-navy-500: #2a639c;
+
+  /* Muted supporting blue. */
+  --color-steel-50: #f3f7fb;
+  --color-steel-100: #e8eef6;
+  --color-steel-200: #d3dfec;
+  --color-steel-300: #aec2d8;
+  --color-steel-400: #7d97b5;
+
+  /* Text: calm dark ink on light surfaces. */
+  --color-ink-900: #10203a;
+  --color-ink-700: #2d3f58;
+  --color-ink-600: #4a5568;
+  --color-ink-500: #64748b;
+
+  /* Surfaces and hairlines. */
+  --color-surface-raised: #f7fafd;
+  --color-surface-sunken: #edf1f7;
+  --color-line: #d3dfec;
+
+  /* Amber: estimated positioning and degrading confidence. */
+  --color-amber-strong: #b45309;
+  --color-amber-degraded: #f59e0b;
+  --color-amber-pill: #fef3c7;
+  --color-amber-pill-border: #fcd34d;
+
+  /* Green: healthy GNSS and confirmed success only. */
+  --color-trust-50: #ecfdf5;
+  --color-trust-500: #10b981;
+  --color-trust-600: #047857;
+
+  /* Red: errors, unsafe assumptions, low confidence only. */
+  --color-warn-50: #fef2f2;
+  --color-warn-500: #ef4444;
+  --color-warn-600: #dc2626;
+
+  /* Map surface palette (schematic preview + fallback sketch). */
+  --color-map-bg: #dfe7f0;
+  --color-map-tile-line: #cbd5e1;
+  --color-map-route: #1d4ed8;
+  --color-map-route-dr: #f59e0b;
+  --color-map-tunnel: #2b3b4e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-navy-600);
+    outline-offset: 2px;
+  }
+}
+
+/* Numeric readouts (speed, uncertainty, telemetry) must not shift width. */
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shared surface treatment for map containers. */
+@utility map-surface {
+  isolation: isolate;
+  background-color: var(--color-map-bg);
+}
+
+/* Honor reduced-motion preferences globally; components also guard JS-driven
+   animation individually. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==== Leaflet integration (real OSM map) ==== */
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: var(--color-map-bg);
+}
+
+/* Vehicle marker: navy disc with an amber directional tip, rotated to heading. */
+.dhruva-vehicle-icon {
+  background: transparent;
+  border: none;
+}
+
+.dhruva-vehicle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-navy-900);
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 1px 6px rgba(7, 26, 44, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 120ms linear;
+}
+
+.dhruva-vehicle-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 9px solid var(--color-map-route-dr);
+  transform: translateY(-3px);
+}
+
+/* Keep Leaflet controls reachable above the fallback overlay. */
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 500;
+}
+
+/* Attribution legibility on the map surface. */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: var(--color-ink-600);
+  font-size: 9px;
+}
+
+.leaflet-control-attribution a {
+  color: var(--color-navy-700);
+}

@@ -1,0 +1,10 @@
+node_modules
+.next
+.next-dev
+out
+coverage
+*.tsbuildinfo
+next-env.d.ts
+.devserver.log
+genlog.txt
+data/iov/
