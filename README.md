@@ -83,31 +83,31 @@ DHRUVA solves these challenges through an integrated on-device architecture:
 ## Screenshots
 
 ### 1. Landing Screen & Mode Selection
-![Landing Screen](assets/screenshots/01-landing-screen.png)
+![Landing Screen](assets/screenshots/01-landing-screen-phone.jpg)
 *Initial product interface providing entry points for live smartphone navigation, recorded benchmark drive replay, and methodology documentation.*
 
 ---
 
 ### 2. How DHRUVA Works - Pipeline Architecture
-![How DHRUVA Works](assets/screenshots/02-how-dhruva-works.png)
+![How DHRUVA Works](assets/screenshots/02-how-dhruva-works-phone.jpg)
 *Four-stage dead reckoning architecture: smartphone inertial sensing, motion estimation, error-state filtering with vehicle constraints, and offline map matching.*
 
 ---
 
 ### 3. Outage Simulation Visual & Tunnel Dynamics
-![Tunnel Outage Visual](assets/screenshots/03-tunnel-outage-visual.png)
+![Tunnel Outage Visual](assets/screenshots/03-tunnel-outage-visual-phone.jpg)
 *Dynamic visualization demonstrating route progression entering a tunnel, dashed inertial trajectory, honest widening uncertainty corridors, and PWA installation prompt.*
 
 ---
 
 ### 4. Device Sensor & Geolocation Permissions
-![Device Permissions](assets/screenshots/04-sensor-permissions.png)
+![Device Permissions](assets/screenshots/04-sensor-permissions-phone.jpg)
 *Live navigation initialization requesting hardware Geolocation, DeviceMotion, and DeviceOrientation sensor access with offline tile cache management.*
 
 ---
 
 ### 5. Live Navigation & Real-Time Dead Reckoning
-![Live Navigation](assets/screenshots/05-live-navigation-dead-reckoning.png)
+![Live Navigation](assets/screenshots/05-live-navigation-dead-reckoning-phone.jpg)
 *Live dead reckoning telemetry during a GNSS blackout: real-time Leaflet tracking, active outage timer (8s elapsed), and inertial estimates for latitude, longitude, speed, and heading.*
 
 ---
