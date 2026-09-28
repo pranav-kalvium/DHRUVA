@@ -80,35 +80,49 @@ DHRUVA solves these challenges through an integrated on-device architecture:
 
 ---
 
+## Demo
+
+![DHRUVA Demo](assets/dhruva-demo.gif)
+
+*Live dead reckoning in action — GNSS signal lost, DHRUVA takes over and keeps estimating position through a tunnel blackout.*
+
+> A full-resolution screen recording is available at [`assets/dhruva-promo.mp4`](assets/dhruva-promo.mp4).
+
+---
+
 ## Screenshots
 
-### 1. Landing Screen & Mode Selection
-![Landing Screen](assets/screenshots/01-landing-screen-phone.jpg)
-*Initial product interface providing entry points for live smartphone navigation, recorded benchmark drive replay, and methodology documentation.*
-
----
-
-### 2. How DHRUVA Works - Pipeline Architecture
-![How DHRUVA Works](assets/screenshots/02-how-dhruva-works-phone.jpg)
-*Four-stage dead reckoning architecture: smartphone inertial sensing, motion estimation, error-state filtering with vehicle constraints, and offline map matching.*
-
----
-
-### 3. Outage Simulation Visual & Tunnel Dynamics
-![Tunnel Outage Visual](assets/screenshots/03-tunnel-outage-visual-phone.jpg)
-*Dynamic visualization demonstrating route progression entering a tunnel, dashed inertial trajectory, honest widening uncertainty corridors, and PWA installation prompt.*
-
----
-
-### 4. Device Sensor & Geolocation Permissions
-![Device Permissions](assets/screenshots/04-sensor-permissions-phone.jpg)
-*Live navigation initialization requesting hardware Geolocation, DeviceMotion, and DeviceOrientation sensor access with offline tile cache management.*
-
----
-
-### 5. Live Navigation & Real-Time Dead Reckoning
-![Live Navigation](assets/screenshots/05-live-navigation-dead-reckoning-phone.jpg)
-*Live dead reckoning telemetry during a GNSS blackout: real-time Leaflet tracking, active outage timer (8s elapsed), and inertial estimates for latitude, longitude, speed, and heading.*
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/screenshots/01-landing-screen-phone.jpg" width="170" alt="Landing Screen"/>
+      <br/><sub><b>Landing Screen</b></sub>
+      <br/><sub>Mode selection &amp; overview</sub>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/02-how-dhruva-works-phone.jpg" width="170" alt="How DHRUVA Works"/>
+      <br/><sub><b>How It Works</b></sub>
+      <br/><sub>4-stage pipeline</sub>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/03-tunnel-outage-visual-phone.jpg" width="170" alt="Tunnel Outage Visual"/>
+      <br/><sub><b>Tunnel Outage</b></sub>
+      <br/><sub>Uncertainty corridor</sub>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/04-sensor-permissions-phone.jpg" width="170" alt="Device Permissions"/>
+      <br/><sub><b>Sensor Permissions</b></sub>
+      <br/><sub>Location &amp; motion access</sub>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/05-live-navigation-dead-reckoning-phone.jpg" width="170" alt="Live Navigation"/>
+      <br/><sub><b>Live Dead Reckoning</b></sub>
+      <br/><sub>Real-time DR telemetry</sub>
+    </td>
+  </tr>
+</table>
+</div>
 
 ---
 
